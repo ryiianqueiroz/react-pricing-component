@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgb(232, 241, 248);
+    background-image: url('./images/bg-top.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 15px;
+    text-align: center;
+}
+
+.App{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.pper{
+    padding: 60px 20px;
+}
+
+header{
+    padding-bottom: 20px;
+
+    h1{
+        color: rgb(120, 121, 155);
+    }
+
+    .changePlan{
+        display: flex;
+        justify-content: center;
+        color: rgb(174, 175, 199);
+        margin-top: 10px;
+        
+        p{
+            margin: 20px;
+            font-size: 18px;
+        }
+
+        .toggle-switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+            margin-top: 12px;
+        
+            .toggle-switch-checkbox {
+                display: none;
+            }
+            
+            .toggle-switch-label {
+                position: absolute;
+                cursor: pointer;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: rgb(133, 99, 212);
+                -webkit-transition: .4s;
+                transition: .4s;
+                border-radius: 34px;
+            }
+
+            .toggle-switch-label:before {
+                position: absolute;
+                content: "";
+                height: 26px;
+                width: 26px;
+                left: 4px;
+                bottom: 4px;
+                background-color: white;
+                -webkit-transition: .4s;
+                transition: .4s;
+                border-radius: 50%;
+            }
+
+            .toggle-switch-checkbox:checked + .toggle-switch-label {
+                background-color: rgb(133, 99, 212);
+            }
+
+            .toggle-switch-checkbox:checked + .toggle-switch-label:before {
+                -webkit-transform: translateX(26px);
+                -ms-transform: translateX(26px);
+                transform: translateX(26px);
+                background-color: #ffffff;
+            }
+        }   
+    }
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .containers{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+
+        .container{
+            padding: 50px 40px;
+            text-align: center;
+            background-color: white;
+            border-radius: 12px;
+            align-self: center;
+
+            .p-plan{
+                color: rgb(121, 116, 150);
+                font-size: 18px;
+
+                &.feature{
+                    color: white;
+                }
+            }
+
+            .price_plan{
+                font-size: 70px;
+                color: rgb(158, 164, 196);
+
+                &.feature{
+                    color: white;
+                }
+            }
+
+            .containers-text{
+                margin-top: 20px;
+
+                p{
+                    color: hsl(233, 4%, 53%);
+                    border-top: 1px solid gray;
+                    border-bottom: 1px solid gray;
+                    padding: 15px;
+                }
+
+                &.feature{
+                    p{
+                        border-top: 1px solid white;
+                        border-bottom: 1px solid white;
+                        color: white;
+                    }
+                }
+            }
+
+            .btn{
+                padding: 15px 100px;
+                border: none;
+                margin-top: 25px;
+                background: linear-gradient(103deg, rgba(154,159,228,1) 0%, rgba(100,100,250,1) 100%);
+                border-radius: 12px;
+                color: white;
+                font-size: 15px;
+                font-weight: bold;
+                cursor: pointer;
+
+                &.feature{
+                    background: white;
+                    color: rgb(138, 145, 211);
+                }
+            }
+
+            &.feature{
+                padding: 70px 40px;
+                background: linear-gradient(180deg, rgba(154,159,228,1) 0%, rgba(100,100,250,1) 100%);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    body{
+        font-size: 14px;
+    }
+
+    .App{
+        max-width: 1000px;
+    }
+
+    section{
+
+        .containers{
+
+            .container{
+                padding: 30px 10px;
+    
+                .p-plan{
+                    color: rgb(121, 116, 150);
+                    font-size: 17px;
+    
+                    &.feature{
+                        color: white;
+                    }
+                }
+    
+                .price_plan{
+                    font-size: 50px;
+                    margin: 10px;
+
+                }
+    
+                .containers-text{
+    
+                    p{
+                        padding: 10px;
+                    }
+                }
+    
+                &.feature{
+                    padding: 60px 20px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 970px) {
+    section{
+        .containers{
+            display: block;
+
+            .container{
+                padding: 50px 40px;
+
+                &.feature{
+                    padding: 70px 40px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+        
+    header{
+
+        h1{
+            color: rgb(120, 121, 155);
+            font-size: 19px;
+        }
+
+        .changePlan{
+            
+            p{
+                margin: 20px;
+                font-size: 14px;
+            }
+        }
+    }
+
+    section{
+        .containers{
+            display: block;
+
+            .container{
+                padding: 50px 0px;
+
+                &.feature{
+                    padding: 70px 0px;
+                }
+            
+
+                .p-plan{
+                    font-size: 15px;
+                }
+
+                .price_plan{
+                    font-size: 50px;
+                }
+
+                .containers-text{
+                    margin-top: 40px;
+                    width: 70%;
+                    margin-left: 15%;
+
+                    p{
+                        padding: 10px;
+                    }
+
+                    &.feature{
+                        width: 100%;
+                        margin-left: 0%;
+                    }
+                }
+            }
+        }
+    }
+}
