@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/react-pricing-component/static/css/main.43cce600.css",
+    "main.js": "/react-pricing-component/static/js/main.be2848aa.js",
+    "static/media/bg-top.svg": "/react-pricing-component/static/media/bg-top.4980c1fd1180f71d5782.svg",
+    "index.html": "/react-pricing-component/index.html",
+    "main.43cce600.css.map": "/react-pricing-component/static/css/main.43cce600.css.map",
+    "main.be2848aa.js.map": "/react-pricing-component/static/js/main.be2848aa.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.43cce600.css",
+    "static/js/main.be2848aa.js"
+  ]
+}
