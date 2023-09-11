@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Montserrat", sans-serif;
+  background-color: rgb(232, 241, 248);
+  background-image: url("./images/bg-top.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 15px;
+  text-align: center;
+}
+
+.App {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.pper {
+  padding: 60px 20px;
+}
+
+header {
+  padding-bottom: 20px;
+}
+header h1 {
+  color: rgb(120, 121, 155);
+}
+header .changePlan {
+  display: flex;
+  justify-content: center;
+  color: rgb(174, 175, 199);
+  margin-top: 10px;
+}
+header .changePlan p {
+  margin: 20px;
+  font-size: 18px;
+}
+header .changePlan .toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin-top: 12px;
+}
+header .changePlan .toggle-switch .toggle-switch-checkbox {
+  display: none;
+}
+header .changePlan .toggle-switch .toggle-switch-label {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(133, 99, 212);
+  transition: 0.4s;
+  border-radius: 34px;
+}
+header .changePlan .toggle-switch .toggle-switch-label:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+header .changePlan .toggle-switch .toggle-switch-checkbox:checked + .toggle-switch-label {
+  background-color: rgb(133, 99, 212);
+}
+header .changePlan .toggle-switch .toggle-switch-checkbox:checked + .toggle-switch-label:before {
+  transform: translateX(26px);
+  background-color: #ffffff;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section .containers {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+section .containers .container {
+  padding: 50px 40px;
+  text-align: center;
+  background-color: white;
+  border-radius: 12px;
+  align-self: center;
+}
+section .containers .container .p-plan {
+  color: rgb(121, 116, 150);
+  font-size: 18px;
+}
+section .containers .container .p-plan.feature {
+  color: white;
+}
+section .containers .container .price_plan {
+  font-size: 70px;
+  color: rgb(158, 164, 196);
+}
+section .containers .container .price_plan.feature {
+  color: white;
+}
+section .containers .container .containers-text {
+  margin-top: 20px;
+}
+section .containers .container .containers-text p {
+  color: hsl(233deg, 4%, 53%);
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+  padding: 15px;
+}
+section .containers .container .containers-text.feature p {
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  color: white;
+}
+section .containers .container .btn {
+  padding: 15px 100px;
+  border: none;
+  margin-top: 25px;
+  background: linear-gradient(103deg, rgb(154, 159, 228) 0%, rgb(100, 100, 250) 100%);
+  border-radius: 12px;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+section .containers .container .btn.feature {
+  background: white;
+  color: rgb(138, 145, 211);
+}
+section .containers .container.feature {
+  padding: 70px 40px;
+  background: linear-gradient(180deg, rgb(154, 159, 228) 0%, rgb(100, 100, 250) 100%);
+}
+
+@media screen and (max-width: 1100px) {
+  body {
+    font-size: 14px;
+  }
+  .App {
+    max-width: 1000px;
+  }
+  section .containers .container {
+    padding: 30px 10px;
+  }
+  section .containers .container .p-plan {
+    color: rgb(121, 116, 150);
+    font-size: 17px;
+  }
+  section .containers .container .p-plan.feature {
+    color: white;
+  }
+  section .containers .container .price_plan {
+    font-size: 50px;
+    margin: 10px;
+  }
+  section .containers .container .containers-text p {
+    padding: 10px;
+  }
+  section .containers .container.feature {
+    padding: 60px 20px;
+  }
+}
+@media screen and (max-width: 970px) {
+  section .containers {
+    display: block;
+  }
+  section .containers .container {
+    padding: 50px 40px;
+  }
+  section .containers .container.feature {
+    padding: 70px 40px;
+  }
+}
+@media screen and (max-width: 400px) {
+  header h1 {
+    color: rgb(120, 121, 155);
+    font-size: 19px;
+  }
+  header .changePlan p {
+    margin: 20px;
+    font-size: 14px;
+  }
+  section .containers {
+    display: block;
+  }
+  section .containers .container {
+    padding: 50px 0px;
+  }
+  section .containers .container.feature {
+    padding: 70px 0px;
+  }
+  section .containers .container .p-plan {
+    font-size: 15px;
+  }
+  section .containers .container .price_plan {
+    font-size: 50px;
+  }
+  section .containers .container .containers-text {
+    margin-top: 40px;
+    width: 70%;
+    margin-left: 15%;
+  }
+  section .containers .container .containers-text p {
+    padding: 10px;
+  }
+  section .containers .container .containers-text.feature {
+    width: 100%;
+    margin-left: 0%;
+  }
+}/*# sourceMappingURL=style.css.map */
